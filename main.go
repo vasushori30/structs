@@ -22,13 +22,15 @@ func main() {
 		},
 	}
 
-	jamesPointer := &james
-	jamesPointer.updateName("Jimmy") // this is a pointer to the person struct
+	jamesPointer := &james // This gives memory address of the value this variable is pointing at
+	jamesPointer.updateName("Jimmy")
 	james.print()
 }
 
+// * person is a type description, it means we are working with a pointer to a person
 func (pointerToPerson *person) updateName(newFirstName string) {
-	pointerToPerson.firstName = newFirstName
+	// Here *pointerToPerson gives the value this memory address is pointing at and it also means this is an operator which means we want to manipulate the value the pointer is referencing
+	(*pointerToPerson).firstName = newFirstName
 }
 
 func (p person) print() {
