@@ -21,12 +21,14 @@ func main() {
 			zipCode: 007,
 		},
 	}
-	james.updateName("Jimmy") // this is a pointer to the person struct
+
+	jamesPointer := &james
+	jamesPointer.updateName("Jimmy") // this is a pointer to the person struct
 	james.print()
 }
 
-func (p person) updateName(newFirstName string) {
-	p.firstName = newFirstName
+func (pointerToPerson *person) updateName(newFirstName string) {
+	pointerToPerson.firstName = newFirstName
 }
 
 func (p person) print() {
