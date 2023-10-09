@@ -7,16 +7,16 @@ type contactInfo struct {
 	zipCode int
 }
 type person struct {
-	firstName string
-	lastName  string
-	contact   contactInfo // this is a struct inside a struct
+	firstName   string
+	lastName    string
+	contactInfo // this is a struct inside a struct
 }
 
 func main() {
 	james := person{
 		firstName: "James",
 		lastName:  "Bond",
-		contact: contactInfo{
+		contactInfo: contactInfo{
 			email:   "james.bond007@gmail.com",
 			zipCode: 007,
 		},
