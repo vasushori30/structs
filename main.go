@@ -27,6 +27,9 @@ func main() {
 	james.print()
 }
 
+// Turn value into address with &value
+// Turn address into value with *address
+
 // * person is a type description, it means we are working with a pointer to a person
 func (pointerToPerson *person) updateName(newFirstName string) {
 	// Here *pointerToPerson gives the value this memory address is pointing at
