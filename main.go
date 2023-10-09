@@ -21,5 +21,9 @@ func main() {
 			zipCode: 007,
 		},
 	}
-	fmt.Printf("%+v", james) // %+v will print out the field names as well
+	james.print()
+}
+
+func (p person) print() {
+	fmt.Printf("%+v", p)
 }
